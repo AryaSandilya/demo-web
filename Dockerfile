@@ -1,9 +1,9 @@
 FROM tomcat:9-jdk21
 
-# Remove default apps
-RUN rm -rf C:\Users\khana\Downloads\Setup\apache-tomcat-9.0.115-windows-x64\apache-tomcat-9.0.115\webapps\demo-web.war
+# Remove default web apps inside container
+RUN rm -rf /usr/local/tomcat/webapps/*
 
-# Copy WAR file
-COPY target/demo-web.war C:\Users\khana\Downloads\Setup\apache-tomcat-9.0.115-windows-x64\apache-tomcat-9.0.115\webapps\demo-web.war
+# Copy WAR file from build context into container
+COPY target/demo-web.war /usr/local/tomcat/webapps/ROOT.war
 
-EXPOSE 8081
+EXPOSE 8080
