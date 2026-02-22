@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+
+  web:
+    image: demo-web-app
+    container_name: demo-web-app-container
+    ports:
+      - "8082:8080"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: demo
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
