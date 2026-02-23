@@ -1,9 +1,9 @@
-<%--<html>
+<%-- <html>
 <body>
 <h1>Hello Rahul — Version 1 🚀</h1>
 <p>Build Time: <%= new java.util.Date() %></p>
 </body>
-</html> --%>
+</html>  --%>
 
 
 
@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobeTrotter | Explore the World</title>
+    <title>GlobeTrotter | Explore the New World</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .hero-section {
